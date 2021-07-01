@@ -1,148 +1,208 @@
 @import url("https://fonts.googleapis.com/css?family=Khula&display=swap");
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    color: #fff;
-    font-family: "Khula", sans-serif;
-    height: 100vh;
-    overflow: hidden;
-    margin: 0;
-    text-align: center;
+  color: #fff;
+  font-family: "Khula", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  text-align: center;
 }
 
 a {
-    color: #fff;
-    text-decoration: none;
-    padding: 1rem;
-    transition: all 0.2s ease;
-    border: 2px solid #fff;
-    border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+  padding: 1rem;
+  transition: all 0.2s ease;
+  border: 2px solid #fff;
+  border-radius: 5px;
 }
 
 a:hover {
-    color: rgb(32, 194, 188);
-    text-shadow: 0 0 7px rgb(30, 136, 149);
-    box-shadow: 0 0 8px 7px;
-    border: 2px solid rgb(101, 165, 221);
+  color: rgb(32, 194, 188);
+  text-shadow: 0 0 7px rgb(30, 136, 149);
+  box-shadow: 0 0 8px 7px;
+  border: 2px solid rgb(101, 165, 221);
 }
 
 .start {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 h1 {
-    line-height: 1.4;
-    text-shadow: 0 0 7px #fff;
-    font-size: 4rem;
+  line-height: 1.4;
+  text-shadow: 0 0 7px #fff;
+  font-size: 4rem;
 }
 
 .screen {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-    transition: margin 0.5s ease-out;
-    background: radial-gradient(#278386 0%, #38cedc 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  transition: margin 0.5s ease-out;
+  background: radial-gradient(#278386 0%, #38cedc 100%);
 }
 
 .screen.up {
-    margin-top: -100vh;
+  margin-top: -100vh;
 }
 
 .screen.down {
-    margin-top: 100vh;
+  margin-top: 100vh;
 }
 
 .time-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
 }
 
 .time-list li {
-    margin: 10px;
+  margin: 10px;
 }
 
 .time-btn {
-    background-color: transparent;
-    border: 2px solid #c0c0c0;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-    font-family: inherit;
-    padding: 0.5rem 1rem;
-    font-size: 1.5rem;
-    transition: all 0.2s ease;
+  background-color: transparent;
+  border: 2px solid #c0c0c0;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0.4rem 1rem;
+  font-size: 1.5rem;
+  transition: all 0.2s ease;
 }
 
 .time-btn:hover {
-    border: 2px solid rgb(45, 152, 201);
-    color: rgb(41, 169, 220);
-    text-shadow: 0 0 7px rgb(56, 138, 182);
-    box-shadow: 0 0 8px 7px;
+  border: 2px solid rgb(45, 152, 201);
+  color: rgb(41, 169, 220);
+  text-shadow: 0 0 7px rgb(56, 138, 182);
+  box-shadow: 0 0 8px 7px;
 }
 
 .hide {
-    opacity: 0;
+  opacity: 0;
 }
 
 .primary {
-    color: rgb(54, 195, 208);
+  color: rgb(54, 195, 208);
 }
 
 .board {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    flex-wrap: wrap;
-    width: 500px;
-    height: 500px;
-    background: linear-gradient(118.38deg, #29323c -4.6%, #485563 200.44%);
-    box-shadow: -8px -8px 20px #2a333d, 10px 7px 20px #475462;
-    border-radius: 30px;
-    overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-wrap: wrap;
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(118.38deg, #29323c -4.6%, #485563 200.44%);
+  box-shadow: -8px -8px 20px #2a333d, 10px 7px 20px #475462;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 100px;
 }
 
 .circle {
-    background: linear-gradient(90deg, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
-    position: absolute;
-    border-radius: 50%;
-    cursor: pointer;
+  background: linear-gradient(90deg, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+  position: absolute;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .circle:hover {
-    box-shadow: 0 0 6px 2px;
+  box-shadow: 0 0 6px 2px;
 }
 
 .play-btn {
-    width: 30%;
+  width: 46%;
 }
-
 
 .gradient-button {
+  display: none;
 
-
-    text-decoration: none;
-    color: white;
-    padding: 20px 30px;
-    margin: 50px 20px;
-    border-radius: 10px;
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
-    background-size: 200% auto;
-    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
-    transition: .5s;
+  position: absolute;
+  bottom: 15px;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  padding: 20px 30px;
+  margin: 20px 20px;
+  border-radius: 10px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-image: linear-gradient(
+    to right,
+    #278386 0%,
+    #38cedc 51%,
+    #278386 100%
+  );
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+  border: none;
 }
 .gradient-button:hover {
-    background-position: right center;
+  background-position: right center;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-y: scroll;
+  padding: 60px 15px;
+}
+
+.modal__content {
+  width: 100%;
+  max-width: 500px;
+  padding: 50px;
+  background: #f9f9f9;
+  border-radius: 3px;
+  position: relative;
+}
+
+.modal__close-button {
+  background: #ff0000;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: none;
+  cursor: pointer;
+  transition: 0.3s;
+  outline: none;
+}
+
+.modal__close-button:hover {
+  transition: 0.3s;
+  transform: rotate(180deg);
+}
+
+form {
+  color: black;
 }

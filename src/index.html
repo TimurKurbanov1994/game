@@ -1,41 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  <title>Aim Training | Проект 5</title>
-</head>
-<body>
-<div class="screen">
-  <h1>Aim Training</h1>
-  <a href="#" class="start animate__animated animate__bounce" id="start">Начать игру</a>
-</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>Aim Training | Проект 5</title>
+  </head>
+  <body>
+    <div class="screen">
+      <h1>Aim Training</h1>
+      <a href="#" class="start animate__animated animate__bounce" id="start"
+        >Начать игру</a
+      >
+    </div>
 
-<div class="screen">
-  <h1>Выберите время</h1>
-  <ul class="time-list" id="time-list">
-    <li>
-      <button class="time-btn" data-time="5">5 сек</button>
-    </li>
-    <li>
-      <button class="time-btn" data-time="10">10 сек</button>
-    </li>
-    <li>
-      <button class="time-btn" data-time="20">20 сек</button>
-    </li>
-    <li>
-      <button class="time-btn" data-time="25">25 сек</button>
-    </li>
-  </ul>
-</div>
+    <div class="screen">
+      <h1>Выберите время</h1>
+      <ul class="time-list" id="time-list">
+        <li>
+          <button class="time-btn" data-time="5">5 сек</button>
+        </li>
+        <li>
+          <button class="time-btn" data-time="10">10 сек</button>
+        </li>
+        <li>
+          <button class="time-btn" data-time="20">20 сек</button>
+        </li>
+        <li>
+          <button class="time-btn" data-time="25">25 сек</button>
+        </li>
+      </ul>
+    </div>
 
-<div class="screen">
-  <h3>Осталось <span id="time">00:00</span></h3>
-  <div class="board" id="board"></div>
-  <a href="" class="gradient-button" id="open_modal">Button</a>
-</div>
+    <div class="screen">
+      <h3>Осталось <span id="time">00:00</span></h3>
+      <div class="board" id="board"></div>
+      <button class="gradient-button" id="btn_modal">Авторизация</button>
+    </div>
 
-<script src="script.js"></script>
-</body>
+    <div class="modal">
+      <div class="modal__content">
+        <button class="modal__close-button">
+          <img src="./img/close.svg" width="18" alt="" />
+        </button>
+        <form class="form" id="auth-form">
+          <div class="form_field">
+            <input type="email" id="email" required />
+            <label for="email">Email</label>
+          </div>
+          <div class="form_field">
+            <input type="password" id="password" required />
+            <label for="password">Password</label>
+          </div>
+          <button type="submit" class="mui-btn mui-btn--raised mui-btn--danger">
+            Войти
+          </button>
+        </form>
+        `
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
