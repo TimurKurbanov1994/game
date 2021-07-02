@@ -1,5 +1,5 @@
 import "./styles/style.css";
-import { createRandomCircle, finishGame, createModal } from "./game";
+import {createRandomCircle, finishGame, createModal} from "./game";
 
 const startBtn = document.querySelector("#start");
 const screens = document.querySelectorAll(".screen");
@@ -7,62 +7,67 @@ const timeList = document.querySelector("#time-list");
 const timeEl = document.querySelector("#time");
 const board = document.querySelector("#board");
 const btnModal = document.querySelector(".gradient-button");
+const modal = document.querySelector('.modal');
+const modalClose = document.querySelector('.modal__close');
 
 let time = 0;
 let score = 0;
 
 startBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  screens[0].classList.add("up");
+    e.preventDefault();
+    screens[0].classList.add("up");
 });
 
 timeList.addEventListener("click", (e) => {
-  if (e.target.classList.contains("time-btn")) {
-    time = parseInt(e.target.getAttribute("data-time"));
-    screens[1].classList.add("up");
-    if (time < 10) {
-      timeEl.textContent = `00:0${time}`;
-    } else {
-      timeEl.textContent = `00:${time}`;
+    if (e.target.classList.contains("time-btn")) {
+        time = parseInt(e.target.getAttribute("data-time"));
+        screens[1].classList.add("up");
+        if (time < 10) {
+            timeEl.textContent = `00:0${time}`;
+        } else {
+            timeEl.textContent = `00:${time}`;
+        }
+        startGame(time);
     }
-    startGame(time);
-  }
 });
 
 board.addEventListener("click", (e) => {
-  if (e.target.classList.contains("circle")) {
-    score++;
-    e.target.remove();
-    createRandomCircle();
-  }
+    if (e.target.classList.contains("circle")) {
+        score++;
+        e.target.remove();
+        createRandomCircle();
+    }
 });
 
-// btnModal.addEventListener("click", (e) => {
-//   e.preventDefault();
-//   createModal("asdad", "adsasd");
-// });
+btnModal.addEventListener("click", (e) => {
+    modal.classList.remove('hide')
+});
+
+modalClose.addEventListener('click', () => {
+    modal.classList.add('hide')
+})
 
 createModal("asdad", "adsasd");
 
 function startGame() {
-  board.innerHTML = "";
-  setInterval(decreaseTime, 1000);
-  createRandomCircle();
+    board.innerHTML = "";
+    setInterval(decreaseTime, 1000);
+    createRandomCircle();
 }
 
 function decreaseTime() {
-  if (time === 0) {
-    finishGame(timeEl, score);
-    btnModal.style.display = "block";
-  } else {
-    let current = --time;
-    if (current < 10) {
-      current = `0${current}`;
+    if (time === 0) {
+        finishGame(timeEl, score);
+        btnModal.style.display = "block";
+    } else {
+        let current = --time;
+        if (current < 10) {
+            current = `0${current}`;
+        }
+        setTime(current);
     }
-    setTime(current);
-  }
 }
 
 function setTime(value) {
-  timeEl.textContent = `00:${value}`;
+    timeEl.textContent = `00:${value}`;
 }

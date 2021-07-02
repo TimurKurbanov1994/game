@@ -3,12 +3,17 @@ const colors = ["tomato", "skyblue", "violet", "orange", "palegreen"];
 export function finishGame(selectorTime, value) {
   selectorTime.parentNode.classList.add("hide");
   board.innerHTML = `<h1 class="animate__animated">Ваш счет: ${value}</h1>
+<table class="table">
+<tr><th>Счет</th><th>Дата</th></tr>
+<tr><td>15</td><td>12.05.21</td></tr>
+<tr><td>22</td><td>02.05.21</td></tr>
+<tr><td>9</td><td>11.06.21</td></tr>
+</table>
     <button class="time-btn play-btn" id="play-btn">Сыграть еще раз</button>`;
   const playButton = document.querySelector("#play-btn");
   playButton.addEventListener("click", () => {
     document.location.reload();
   });
-  setColor();
 }
 
 export function createRandomCircle() {
