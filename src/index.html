@@ -38,7 +38,10 @@
 <div class="screen">
     <h3>Осталось <span id="time">00:00</span></h3>
     <div class="board" id="board"></div>
-    <button class="gradient-button" id="btn_modal">Авторизация</button>
+    <input class="board__input" type="name" placeholder="Напиши свое имя"/>
+    <button class="gradient-button board__btn show" id="send_result">Отправить результат</button>
+    <!--    <button class="gradient-button" id="btn_modal">Авторизация</button>-->
+    <!--    <button class="gradient-button" id="btn_user">Отправить результат</button>-->
 </div>
 
 <div class="modal hide">
@@ -48,7 +51,7 @@
                 <div class="modal__close" data-close>&times;</div>
                 <input class="modal__input" type="email" placeholder="email"/>
                 <input class="modal__input" type="password" placeholder="password"/>
-                <button class="gradient-button show">Авторизация</button>
+                <button class="gradient-button show" id="show_result">Посмотреть все резульататы</button>
             </form>
         </div>
     </div>

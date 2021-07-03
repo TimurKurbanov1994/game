@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Khula&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
 
 * {
     box-sizing: border-box;
@@ -125,7 +127,8 @@ h1 {
 }
 
 .play-btn {
-    width: 46%;
+    width: 280px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .gradient-button {
@@ -214,6 +217,27 @@ h1 {
     outline: 0
 }
 
+.board__input {
+    display: block;
+    margin: 20px auto 20px auto;
+    width: 280px;
+    height: 50px;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .2);
+    border: none;
+    font-size: 18px;
+    text-align: center;
+    padding: 0 20px;
+    outline: 0;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+.board__btn {
+    bottom: 90px;
+    margin: 20px 20px;
+    width: 280px;
+    border-radius: 10px;
+}
 
 .modal .gradient-button {
     display: block;
@@ -235,24 +259,26 @@ h1 {
 .table {
     display: block;
     position: absolute;
-    /*width: 100%;*/
-    top: 120px;
-    font-size: 14px;
-    background: white;
+    top: 25px;
+    font-size: 48px;
     max-width: 70%;
-
     border-collapse: collapse;
     text-align: left;
 }
 th {
     font-weight: normal;
-    color: #039;
-    border-bottom: 2px solid #6678b1;
-    padding: 10px 8px;
+    border-bottom: 2px solid white;
+    padding-top: 10px;
+    padding-right: 50px;
+    padding-bottom: 0;
+    font-family: "Khula", sans-serif;
+    line-height: 1.4;
+    text-shadow: 0 0 7px #fff;
+    font-size: 4rem;
 }
 td {
-    color: #669;
-    padding: 9px 8px;
+    font-family: "Khula", sans-serif;
+    padding-top: 5px;
     transition: .3s linear;
 }
 tr:hover td {

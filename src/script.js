@@ -1,5 +1,7 @@
 import "./styles/style.css";
-import {createRandomCircle, finishGame, createModal} from "./game";
+import {createRandomCircle, finishGame, createModal, addLocalStorage, getLocalStorage, Result} from "./game";
+import {authWithEmailAndPass} from "./auth";
+
 
 const startBtn = document.querySelector("#start");
 const screens = document.querySelectorAll(".screen");
@@ -8,10 +10,13 @@ const timeEl = document.querySelector("#time");
 const board = document.querySelector("#board");
 const btnModal = document.querySelector(".gradient-button");
 const modal = document.querySelector('.modal');
+const form = modal.querySelector('form');
+const btn_send = document.querySelector('#send_result')
 const modalClose = document.querySelector('.modal__close');
 
 let time = 0;
 let score = 0;
+
 
 startBtn.addEventListener("click", (e) => {
     e.preventDefault();
@@ -31,6 +36,7 @@ timeList.addEventListener("click", (e) => {
     }
 });
 
+
 board.addEventListener("click", (e) => {
     if (e.target.classList.contains("circle")) {
         score++;
@@ -47,7 +53,13 @@ modalClose.addEventListener('click', () => {
     modal.classList.add('hide')
 })
 
-createModal("asdad", "adsasd");
+
+btn_send.addEventListener('click', () => {
+
+})
+
+form.addEventListener('submit', authWithEmailAndPass('asdasd', 'asdasdas'))
+
 
 function startGame() {
     board.innerHTML = "";
@@ -59,6 +71,7 @@ function decreaseTime() {
     if (time === 0) {
         finishGame(timeEl, score);
         btnModal.style.display = "block";
+        time = null;
     } else {
         let current = --time;
         if (current < 10) {
@@ -71,3 +84,6 @@ function decreaseTime() {
 function setTime(value) {
     timeEl.textContent = `00:${value}`;
 }
+
+
+getLocalStorage(screens, timeEl, localStorage.getItem('score'), btnModal)
