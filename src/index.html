@@ -1,62 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <title>Aim Training | Проект 5</title>
-</head>
-<body>
-<div class="screen">
-    <h1>Aim Training</h1>
-    <a href="#" class="start animate__animated animate__bounce" id="start"
-    >Начать игру</a
-    >
-</div>
-
-<div class="screen">
-    <h1>Выберите время</h1>
-    <ul class="time-list" id="time-list">
-        <li>
-            <button class="time-btn" data-time="5">5 сек</button>
-        </li>
-        <li>
-            <button class="time-btn" data-time="10">10 сек</button>
-        </li>
-        <li>
-            <button class="time-btn" data-time="20">20 сек</button>
-        </li>
-        <li>
-            <button class="time-btn" data-time="25">25 сек</button>
-        </li>
-    </ul>
-</div>
-
-<div class="screen">
-    <h3>Осталось <span id="time">00:00</span></h3>
-    <div class="board" id="board"></div>
-    <input class="board__input" type="name" placeholder="Напиши свое имя"/>
-    <button class="gradient-button board__btn show" id="send_result">Отправить результат</button>
-    <!--    <button class="gradient-button" id="btn_modal">Авторизация</button>-->
-    <!--    <button class="gradient-button" id="btn_user">Отправить результат</button>-->
-</div>
-
-<div class="modal hide">
-    <div class="modal__dialog">
-        <div class="modal__content">
-            <form action="#">
-                <div class="modal__close" data-close>&times;</div>
-                <input class="modal__input" type="email" placeholder="email"/>
-                <input class="modal__input" type="password" placeholder="password"/>
-                <button class="gradient-button show" id="show_result">Посмотреть все резульататы</button>
-            </form>
-        </div>
+  </head>
+  <body>
+    <div class="screen">
+      <h1>Aim Training</h1>
+      <a href="#" class="start animate__animated animate__bounce" id="start"
+        >Начать игру</a
+      >
     </div>
-</div>
 
-<script src="script.js"></script>
-</body>
+    <div class="screen">
+      <h1>Выберите время</h1>
+      <ul class="time-list" id="time-list">
+        <li>
+          <button class="time-btn" data-time="5">5 сек</button>
+        </li>
+        <li>
+          <button class="time-btn" data-time="10">10 сек</button>
+        </li>
+        <li>
+          <button class="time-btn" data-time="20">20 сек</button>
+        </li>
+        <li>
+          <button class="time-btn" data-time="25">25 сек</button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="screen">
+      <h3>Осталось <span id="time">00:00</span></h3>
+      <div class="board" id="board"></div>
+      <div id="send_form" class="hide">
+        <button class="gradient-button board__btn show" id="send_result">
+          Отправить результат
+        </button>
+        <input
+          id="inputName"
+          class="board__input"
+          type="name"
+          placeholder="Напиши свое имя"
+        />
+        <!-- <button class="gradient-button board__btn" id="showModal">
+          Показать результаты
+        </button> -->
+      </div>
+      <button class="gradient-button-circle" id="showModal">вход</button>
+    </div>
+
+    <div class="modal hide">
+      <div class="modal__dialog">
+        <div class="modal__content">
+          <form id="auth_form" action="#">
+            <div class="modal__close" data-close>&times;</div>
+            <input
+              id="email"
+              class="modal__input"
+              type="email"
+              placeholder="email"
+            />
+            <input
+              id="pass"
+              class="modal__input"
+              type="password"
+              placeholder="password"
+            />
+            <button type="submit" class="gradient-button show" id="show_result">
+              Посмотреть результаты
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>

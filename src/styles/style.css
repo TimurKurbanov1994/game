@@ -1,286 +1,313 @@
 @import url("https://fonts.googleapis.com/css?family=Khula&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    color: #fff;
-    font-family: "Khula", sans-serif;
-    height: 100vh;
-    overflow: hidden;
-    margin: 0;
-    text-align: center;
+  color: #fff;
+  font-family: "Khula", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  text-align: center;
 }
 
 a {
-    color: #fff;
-    text-decoration: none;
-    padding: 1rem;
-    transition: all 0.2s ease;
-    border: 2px solid #fff;
-    border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+  padding: 1rem;
+  transition: all 0.2s ease;
+  border: 2px solid #fff;
+  border-radius: 5px;
 }
 
 a:hover {
-    color: rgb(32, 194, 188);
-    text-shadow: 0 0 7px rgb(30, 136, 149);
-    box-shadow: 0 0 8px 7px;
-    border: 2px solid rgb(101, 165, 221);
+  color: rgb(32, 194, 188);
+  text-shadow: 0 0 7px rgb(30, 136, 149);
+  box-shadow: 0 0 8px 7px;
+  border: 2px solid rgb(101, 165, 221);
 }
 
 .start {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 h1 {
-    line-height: 1.4;
-    text-shadow: 0 0 7px #fff;
-    font-size: 4rem;
+  line-height: 1.4;
+  text-shadow: 0 0 7px #fff;
+  font-size: 4rem;
 }
 
 .screen {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-    transition: margin 0.5s ease-out;
-    background: radial-gradient(#278386 0%, #38cedc 100%);
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  transition: margin 0.5s ease-out;
+  background: radial-gradient(#278386 0%, #38cedc 100%);
+  position: relative;
 }
 
 .screen.up {
-    margin-top: -100vh;
+  margin-top: -100vh;
 }
 
 .screen.down {
-    margin-top: 100vh;
+  margin-top: 100vh;
 }
 
 .time-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
 }
 
 .time-list li {
-    margin: 10px;
+  margin: 10px;
 }
 
 .time-btn {
-    background-color: transparent;
-    border: 2px solid #c0c0c0;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-    font-family: inherit;
-    padding: 0.4rem 1rem;
-    font-size: 1.5rem;
-    transition: all 0.2s ease;
+  background-color: transparent;
+  border: 2px solid #c0c0c0;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0.4rem 1rem;
+  font-size: 1.5rem;
+  transition: all 0.2s ease;
 }
 
 .time-btn:hover {
-    border: 2px solid rgb(45, 152, 201);
-    color: rgb(41, 169, 220);
-    text-shadow: 0 0 7px rgb(56, 138, 182);
-    box-shadow: 0 0 8px 7px;
+  border: 2px solid rgb(45, 152, 201);
+  color: rgb(41, 169, 220);
+  text-shadow: 0 0 7px rgb(56, 138, 182);
+  box-shadow: 0 0 8px 7px;
 }
 
 .hide {
-    opacity: 0;
+  opacity: 0;
 }
 
 .primary {
-    color: rgb(54, 195, 208);
+  color: rgb(54, 195, 208);
 }
 
 .board {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    flex-wrap: wrap;
-    width: 500px;
-    height: 500px;
-    background: linear-gradient(118.38deg, #29323c -4.6%, #485563 200.44%);
-    box-shadow: -8px -8px 20px #2a333d, 10px 7px 20px #475462;
-    border-radius: 30px;
-    overflow: hidden;
-    /*margin-bottom: 75px;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-wrap: wrap;
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(118.38deg, #29323c -4.6%, #485563 200.44%);
+  box-shadow: -8px -8px 20px #2a333d, 10px 7px 20px #475462;
+  border-radius: 30px;
+  overflow: hidden;
+  /*margin-bottom: 75px;*/
 }
 
 .circle {
-    background: linear-gradient(90deg, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
-    position: absolute;
-    border-radius: 50%;
-    cursor: pointer;
+  background: linear-gradient(90deg, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+  position: absolute;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .circle:hover {
-    box-shadow: 0 0 6px 2px;
+  box-shadow: 0 0 6px 2px;
 }
 
 .play-btn {
-    width: 280px;
-    font-family: 'Montserrat', sans-serif;
+  width: 280px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .gradient-button {
-    display: none;
-    position: absolute;
-    bottom: 15px;
-    justify-content: center;
-    cursor: pointer;
-    text-decoration: none;
-    color: white;
-    padding: 20px 30px;
-    margin: 40px 20px;
-    border-radius: 10px;
-    font-family: "Montserrat", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    background-image: linear-gradient(
-            to right,
-            #278386 0%,
-            #38cedc 51%,
-            #278386 100%
-    );
-    background-size: 200% auto;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    transition: 0.5s;
-    border: none;
+  display: none;
+  position: absolute;
+  bottom: 15px;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  padding: 20px 30px;
+  margin: 40px 20px;
+  border-radius: 10px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-image: linear-gradient(
+    to right,
+    #278386 0%,
+    #38cedc 51%,
+    #278386 100%
+  );
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+  border: none;
+}
+
+.gradient-button-circle {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  border-radius: 30px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-image: radial-gradient(#38cedc, #299ba5);
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+  border: none;
 }
 
 .gradient-button:hover {
-    background-position: right center;
+  background-position: right center;
+}
+
+.gradient-button-circle:hover {
+  background-position: right center;
 }
 
 .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1050;
-    display: block;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background-color: rgba(0, 0, 0, .5)
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal__dialog {
-    max-width: 500px;
-    margin: 40px auto
+  max-width: 500px;
+  margin: 40px auto;
 }
 
 .modal__content {
-    position: relative;
-    width: 100%;
-    padding: 40px;
-    background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, .2);
-    border-radius: 4px;
-    max-height: 80vh;
-    overflow-y: auto
+  position: relative;
+  width: 100%;
+  padding: 40px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  max-height: 80vh;
+  overflow-y: auto;
 }
 
 .modal__close {
-    position: absolute;
-    top: 8px;
-    right: 14px;
-    font-size: 30px;
-    color: #000;
-    opacity: .5;
-    font-weight: 700;
-    border: none;
-    background-color: transparent;
-    cursor: pointer
+  position: absolute;
+  top: 8px;
+  right: 14px;
+  font-size: 30px;
+  color: #000;
+  opacity: 0.5;
+  font-weight: 700;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
-
 .modal__input {
-    display: block;
-    margin: 20px auto 20px auto;
-    width: 280px;
-    height: 50px;
-    background: #fff;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, .2);
-    border: none;
-    font-size: 18px;
-    text-align: center;
-    padding: 0 20px;
-    outline: 0
+  display: block;
+  margin: 20px auto 20px auto;
+  width: 280px;
+  height: 50px;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: none;
+  font-size: 18px;
+  text-align: center;
+  padding: 0 20px;
+  outline: 0;
 }
 
 .board__input {
-    display: block;
-    margin: 20px auto 20px auto;
-    width: 280px;
-    height: 50px;
-    background: #fff;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, .2);
-    border: none;
-    font-size: 18px;
-    text-align: center;
-    padding: 0 20px;
-    outline: 0;
-    border-radius: 10px;
-    font-family: 'Montserrat', sans-serif;
+  display: block;
+  margin: 0 auto;
+  width: 280px;
+  height: 50px;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: none;
+  font-size: 18px;
+  text-align: center;
+  padding: 0 20px;
+  outline: 0;
+  border-radius: 10px;
+  font-family: "Montserrat", sans-serif;
 }
 .board__btn {
-    bottom: 90px;
-    margin: 20px 20px;
-    width: 280px;
-    border-radius: 10px;
+  margin: 0;
+  width: 280px;
+  border-radius: 10px;
+  position: relative;
 }
 
 .modal .gradient-button {
-    display: block;
-    width: 280px;
-    margin: 20px auto;
-    position: static;
+  display: block;
+  width: 280px;
+  margin: 20px auto;
+  position: static;
 }
 
 .show {
-    display: block
+  display: block;
 }
 
 .hide {
-    display: none
+  display: none;
 }
-
-
 
 .table {
-    display: block;
-    position: absolute;
-    top: 25px;
-    font-size: 48px;
-    max-width: 70%;
-    border-collapse: collapse;
-    text-align: left;
+  display: block;
+  position: absolute;
+  top: 25px;
+  font-size: 18px;
+  max-width: 90%;
+  justify-content: center;
+  border-collapse: collapse;
+  text-align: left;
 }
 th {
-    font-weight: normal;
-    border-bottom: 2px solid white;
-    padding-top: 10px;
-    padding-right: 50px;
-    padding-bottom: 0;
-    font-family: "Khula", sans-serif;
-    line-height: 1.4;
-    text-shadow: 0 0 7px #fff;
-    font-size: 4rem;
+  font-weight: normal;
+  border-bottom: 2px solid white;
+  padding-top: 10px;
+  padding-right: 50px;
+  padding-bottom: 0;
+  font-family: "Khula", sans-serif;
+  line-height: 1.4;
+  text-shadow: 0 0 7px #fff;
+  font-size: 1.5rem;
 }
 td {
-    font-family: "Khula", sans-serif;
-    padding-top: 5px;
-    transition: .3s linear;
+  font-family: "Khula", sans-serif;
+  padding-top: 5px;
+  transition: 0.3s linear;
 }
 tr:hover td {
-    color: #6699ff;
+  color: #38cedc;
+}
+
+#send_form {
+  position: relative;
+  margin-top: 30px;
 }
